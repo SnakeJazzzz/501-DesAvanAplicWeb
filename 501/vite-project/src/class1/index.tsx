@@ -2,9 +2,9 @@
 import React from 'react';
 
 // Import the components from the actual location
-import ES6Features from '../A01781041/Clase1 /ES6Features';
-import AdvancedJS from '../A01781041/Clase1 /AdvancedJS';
-import LoginDashboard from '../A01781041/Clase1 /LoginDashboard';
+import ES6Features from './A01781041/ES6Features';
+import AdvancedJS from './A01781041/AdvancedJS';
+import LoginDashboard from './A01781041/LoginDashboard';
 
 // A simple router component that will detect the query parameter and show the right component
 const ClassOne: React.FC = () => {

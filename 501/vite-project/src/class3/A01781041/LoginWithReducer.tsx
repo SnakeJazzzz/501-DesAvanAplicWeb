@@ -1,5 +1,5 @@
 // src/class3/A01781041/LoginWithReducer.tsx
-import React, { useReducer, useEffect } from 'react';
+import React, { useReducer} from 'react';
 import InputField from './components/InputField';
 import Button from './components/Button';
 
