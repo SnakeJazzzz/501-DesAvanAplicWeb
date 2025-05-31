@@ -1,5 +1,4 @@
 import React, { useState, FormEvent, ChangeEvent } from 'react';
-
 interface TravelRequestValues {
   destination: string;
   departureDate: string;

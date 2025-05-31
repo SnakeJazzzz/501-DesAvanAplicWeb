@@ -1,6 +1,5 @@
-
+import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-
 import TravelRequestForm from '../components/TravelRequestForm';
 import '@testing-library/jest-dom';
 
@@ -124,11 +123,12 @@ describe('TravelRequestForm Component', () => {
     expect(errorMessage).toBeInTheDocument();
     
     // Fix return date
-    fireEvent.change(returnInput, { target: { value: '2025-05-15' } });
+    fireEvent.change(departureInput, { target: { value: '2025-06-10' } });
+    fireEvent.change(returnInput, { target: { value: '2025-06-15' } });
     fireEvent.click(screen.getByTestId('submit-button'));
-    
-    // No date errors should now be present
     expect(screen.queryByText('Departure date cannot be in the past')).not.toBeInTheDocument();
+    // No date errors should now be present
+
     const returnDateErrors = screen.queryAllByText('Return date must be after departure date', { selector: '.error-message' });
     expect(returnDateErrors.length).toBe(0);
   });
